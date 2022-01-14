@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class ApiStateCasesService {
 
   constructor(private httpClient:HttpClient) { }
-  public getCovidCase () {
-    return this.httpClient.get("https://data.covid19india.org/data.json");
+  public getCovidCase<Observable>() {
+    return this.httpClient.get("https://api.rootnet.in/covid19-in/stats/latest");
   }
 }
